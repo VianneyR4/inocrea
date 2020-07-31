@@ -1,0 +1,513 @@
+body {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+    overflow: auto;
+    color: #666;
+}
+
+.body {
+    display: grid;
+    font-family: Agency FB, Helvetica, Arial, sans-serif;
+    grid-template-columns: 205px auto;
+    grid-template-rows: 100%;
+    z-index: -90;
+}
+
+#lighter {
+    background-color: #ebebeb;
+}
+
+#blue {
+    background: linear-gradient(#234e6b, #1e2a4c);
+}
+
+.br {
+    border: 1px solid #888;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.side-bar {
+    background-color: #fff;
+    min-height: 800px;
+}
+
+.mobile {
+    display: none;
+    height: 60px !important;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 1px 3px 5px #ccc;
+}
+
+@media (max-width: 950px) {
+    .contenu-accueil p {
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 750px) {
+    .body {
+        display: grid;
+        font-family: Agency FB, Helvetica, Arial, sans-serif;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+    .side-bar {
+        display: none;
+        min-height: 100px !important;
+    }
+    .footer-sid-bar {
+        padding-bottom: 0px !important;
+        margin-top: 0px !important;
+    }
+    #social-lite {
+        height: 20px;
+        margin: 0px 4px
+    }
+    .mobile {
+        display: block;
+    }
+    .mobile button {
+        background: none;
+        border: 1px solid #555;
+        border-radius: 5px;
+        padding: 5px 7px;
+        margin: 15px;
+    }
+    .side-bar .logo {
+        padding: 0px 0px;
+        margin-top: -20px;
+        display: none;
+    }
+    .contenu-accueil p {
+        width: 100% !important;
+        color: #222;
+    }
+    .contenu-accueil {
+        min-height: 850px !important;
+    }
+}
+
+.side-bar .logo {
+    width: 65%;
+    padding: 20px 32.5px 60px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    width: 100%;
+}
+
+.menu ul li a.dropdown {
+    /* display: flex; */
+    width: 100%;
+    margin: 3px 0px 0px -3px;
+}
+
+.menu ul li.active {
+    width: 100%;
+    background: #21405f;
+}
+
+.menu ul li.active a {
+    color: #fff !important;
+}
+
+.menu ul li a img {
+    /* width: 25px; */
+    height: 20px;
+    padding: 0px 10px 0px 0px;
+    margin-top: 1px;
+}
+
+#dd_icon {
+    width: 10px;
+    height: 10px;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+.separateur {
+    padding: 0;
+    height: 1px;
+    font-size: 1px;
+    width: 80%;
+    margin: 10px auto;
+    border-top: 1px solid #ddd;
+}
+
+
+/* ------- dropdown ------- */
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-left: 22px;
+    margin-right: 15px;
+    z-index: 1;
+    padding: 0;
+}
+
+.dropdown-content a {
+    color: #444;
+    padding: 3px 0px !important;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+}
+
+.dropdown-content a .span {
+    padding: 3px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover .span,
+.dropdown-content a .span.active {
+    background-color: #52aeeb;
+    color: #fff;
+}
+
+
+/* ---- 2 ----  */
+
+.dropdown-content2 {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-left: 22px;
+    margin-right: 15px;
+    z-index: 1;
+    padding: 0;
+}
+
+.dropdown-content2 a {
+    color: #444;
+    padding: 3px 0px !important;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+}
+
+.dropdown-content2 a .span {
+    padding: 3px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.dropdown-content2 a:hover .span {
+    background-color: #52aeeb;
+    color: #fff;
+}
+
+.dropdown-content2 a:hover .span,
+.dropdown-content2 a .span.active {
+    background-color: #52aeeb;
+    color: #fff;
+}
+
+.show {
+    display: block !important;
+}
+
+
+/* --- end dropdown --- */
+
+.footer-sid-bar {
+    /* text-align: center; */
+    padding-bottom: 100px;
+    padding-left: 10px;
+    margin-top: 50px;
+}
+
+#social-lite {
+    height: 20px;
+    margin: 0px 4px
+}
+
+
+/* ===================================
+				 body index
+=================================== */
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.container .top {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.btn {
+    text-decoration: none;
+    color: #21405f;
+    padding: 5px 20px 7px;
+    border-radius: 50px;
+    border: 1px solid #21405f;
+    margin: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 1px 3px 10px #00000023;
+}
+
+.btn:hover {
+    box-shadow: 1px 5px 10px #00000041;
+}
+
+.btn-oc {
+    border-radius: 5px !important;
+}
+
+.primary {
+    background-color: #21405f;
+    color: #fff;
+}
+
+.white {
+    background-color: #fff;
+    color: #21405f;
+    border: 1px solid #21405f;
+}
+
+.primary-2 {
+    background: none;
+    color: #66a9d6;
+    border: 1px solid #66a9d6;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: bolder;
+    color: #21405f;
+}
+
+.color-white {
+    color: #fff !important;
+}
+
+.color-blue {
+    color: #66a9d6 !important;
+}
+
+.contenu-accueil {
+    min-height: 650px !important;
+    position: relative;
+}
+
+#bg_accueil {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 72%;
+    /* height: 600px; */
+    /* z-index: -1; */
+}
+
+.contenu-accueil p {
+    width: 40%;
+}
+
+.contenu-accueil span {
+    position: absolute;
+    z-index: 9;
+    margin-top: -40px;
+    width: 100%;
+}
+
+
+/* ===================================
+				 End body index
+=================================== */
+
+
+/* ===================================
+				 terminaux index
+=================================== */
+
+.col_terminaux {
+    display: grid;
+    grid-template-columns: 400px auto;
+    margin-top: -20px;
+}
+
+.col_terminaux .left {
+    text-align: center;
+}
+
+.col_terminaux .left .title {
+    margin: 0;
+}
+
+.contenu-terminaux .left #te {
+    margin-bottom: 15px !important;
+}
+
+.terminal {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+.yomani {
+    color: #1e2a4c;
+    font-size: 40px;
+}
+
+.terminal .title {
+    font-size: 20px !important;
+    font-weight: bolder !important;
+}
+
+.terminal small {
+    font-size: 15.5px !important;
+    color: #444 !important;
+    display: block;
+}
+
+.terminal .entete {
+    display: grid;
+    grid-template-columns: 60% auto;
+}
+
+.terminal .entete .entete-left {}
+
+.terminal .entete .entete-left .pt-icones img {
+    height: 15px;
+    margin: 0px 3px
+}
+
+.terminal .entete .entete-right {
+    text-align: right;
+    padding: 10px 0px;
+}
+
+.col_terminaux .right {
+    color: #fff;
+    padding: 100px 10%;
+}
+
+.col_terminaux .right .title {
+    font-size: 25px;
+}
+
+.col_terminaux .right p.title {
+    font-size: 38px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.terminal center {
+    margin: 20px 0px;
+}
+
+.terminal .mode2 {
+    display: grid;
+    grid-template-columns: 150px auto;
+    margin-bottom: 5px;
+}
+
+.terminal .mode2 .mode2-left {
+    border-right: 1px solid #999;
+}
+
+.terminal .mode2 .mode2-right {
+    padding-left: 5px;
+}
+
+.title#petit_small {
+    font-size: 13px !important;
+}
+
+#tarifs_btn {
+    font-size: 16px;
+    padding: 5px 8px;
+    background-color: #52aeeb;
+    color: #fff;
+    border: none;
+}
+
+
+/* ===================================
+				 End terminaux index
+=================================== */
+
+
+/* ===================================
+				 End terminaux index
+=================================== */
+
+.service .left {
+    text-align: left;
+}
+
+.service .left .title {
+    font-size: 22px;
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.925) !important;
+    line-height: 22px;
+    border-bottom: 1px solid #52aeebb4;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+.service .left .title:focus {
+    color: #66a9d6 !important;
+}
+
+.service .right {
+    position: relative;
+}
+
+.elw {
+    position: absolute;
+    display: none;
+}
+
+.element {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px 35px;
+    color: #333;
+    font-size: 18px;
+    margin-top: -80px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+}
+
+
+/* ===================================
+				 End terminaux index
+=================================== */
