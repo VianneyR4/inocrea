@@ -1,8 +1,46 @@
+/* @font-face {
+    font-family: Netfont;
+    src: url('./fonts/OdibeeSans-Regular.TTF');
+} */
+
+@font-face {
+    font-family: Agency FB;
+    src: url('./fonts/agencyr.TTF');
+}
+
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url('./fonts/Ubuntu-Regular.TTF');
+}
+
+@font-face {
+    font-family: Ubuntu-Italic;
+    src: url('./fonts/Ubuntu-Italic.TTF');
+}
+
+@font-face {
+    font-family: Ubuntu-light;
+    src: url('./fonts/Ubuntu-light.TTF');
+}
+
+@font-face {
+    font-family: Ubuntu-Medium;
+    src: url('./fonts/Ubuntu-Medium.TTF');
+}
+
+@font-face {
+    font-family: Address Sans Pro Cd Light;
+    src: url('./fonts/Address Sans Pro Cd Light.TTF');
+}
+
 body {
     box-sizing: border-box;
     height: 100%;
     margin: 0;
     padding: 0;
+    /* font-family: Ubuntu-Regular, sans-serif;
+    font-size: 16px; */
+    font-family: Agency FB, sans-serif;
     font-size: 21px;
     overflow: auto;
     color: #666;
@@ -10,7 +48,6 @@ body {
 
 .body {
     display: grid;
-    font-family: Agency FB, Helvetica, Arial, sans-serif;
     grid-template-columns: 205px auto;
     grid-template-rows: 100%;
     z-index: -90;
@@ -21,7 +58,7 @@ body {
 }
 
 #blue {
-    background: linear-gradient(#234e6b, #1e2a4c);
+    background: linear-gradient(#234e6b, #192547);
 }
 
 .br {
@@ -42,7 +79,7 @@ body {
     height: 60px !important;
     background-color: #fff;
     overflow: hidden;
-    box-shadow: 1px 3px 5px #ccc;
+    box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.267);
 }
 
 @media (max-width: 950px) {
@@ -60,6 +97,7 @@ body {
     }
     .side-bar {
         display: none;
+        z-index: 1;
         min-height: 100px !important;
     }
     .footer-sid-bar {
@@ -75,11 +113,18 @@ body {
     }
     .mobile button {
         background: none;
-        border: 1px solid #555;
-        border-radius: 5px;
-        padding: 5px 7px;
+        border: 1.5px solid #555;
+        outline: none;
+        border-radius: 50px;
+        padding: 5px 15px;
         margin: 15px;
+        cursor: pointer;
+        font-weight: bold;
     }
+    /* .dropdown-content,
+    .dropdown-content2 {
+        display: none;
+    } */
     .side-bar .logo {
         padding: 0px 0px;
         margin-top: -20px;
@@ -106,17 +151,26 @@ body {
 }
 
 .menu ul li a {
-    padding: 8px 15px;
     text-decoration: none;
     color: #222;
     font-size: 18px;
+    /* font-size: 14px; */
     width: 100%;
+    position: relative;
+}
+
+.menu ul li {
+    width: 100%;
+    padding: 7px 0px;
+    margin: 2px 0px;
 }
 
 .menu ul li a.dropdown {
-    /* display: flex; */
     width: 100%;
-    margin: 3px 0px 0px -3px;
+}
+
+.menu ul li a span {
+    margin-left: 45px;
 }
 
 .menu ul li.active {
@@ -129,17 +183,21 @@ body {
 }
 
 .menu ul li a img {
-    /* width: 25px; */
-    height: 20px;
-    padding: 0px 10px 0px 0px;
-    margin-top: 1px;
+    width: 17px;
+    padding: 3px 0px 0px 15px;
+    position: absolute;
 }
 
 #dd_icon {
     width: 10px;
     height: 10px;
     margin-top: 4px;
-    margin-left: 5px;
+    margin-left: -8px;
+}
+
+#icone_users {
+    width: 22px;
+    margin-top: -2px
 }
 
 .separateur {
@@ -168,24 +226,25 @@ body {
     display: none;
     position: relative;
     overflow: hidden;
-    margin-top: 0px;
-    margin-left: 22px;
-    margin-right: 15px;
+    margin: 0px 3px -10px 35px;
+    min-height: 68px;
     z-index: 1;
     padding: 0;
 }
 
 .dropdown-content a {
     color: #444;
-    padding: 3px 0px !important;
+    padding: 3px 0px!important;
     text-decoration: none;
     display: block;
-    font-size: 17px;
+    font-size: 17px !important;
+    /* font-size: 13px !important; */
 }
 
 .dropdown-content a .span {
     padding: 3px 10px;
     margin-right: 5px;
+    margin-bottom: -8px;
     border-radius: 5px;
 }
 
@@ -202,24 +261,25 @@ body {
     display: none;
     position: relative;
     overflow: hidden;
-    margin-top: 0px;
-    margin-left: 22px;
-    margin-right: 15px;
+    margin: 0px 3px -10px 35px;
+    min-height: 68px;
     z-index: 1;
     padding: 0;
 }
 
 .dropdown-content2 a {
     color: #444;
-    padding: 3px 0px !important;
+    padding: 3px 0px!important;
     text-decoration: none;
     display: block;
-    font-size: 17px;
+    font-size: 17px !important;
+    /* font-size: 13px !important; */
 }
 
 .dropdown-content2 a .span {
     padding: 3px 10px;
     margin-right: 5px;
+    margin-bottom: -8px;
     border-radius: 5px;
 }
 
@@ -242,7 +302,6 @@ body {
 /* --- end dropdown --- */
 
 .footer-sid-bar {
-    /* text-align: center; */
     padding-bottom: 100px;
     padding-left: 10px;
     margin-top: 50px;
@@ -251,6 +310,46 @@ body {
 #social-lite {
     height: 20px;
     margin: 0px 4px
+}
+
+.sarted-message {
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    z-index: 99;
+    bottom: 0;
+    background-color: #274664cb;
+}
+
+.d-none {
+    display: none;
+}
+
+.sarted-message .message {
+    background-color: #fff;
+    color: #192547;
+    margin: 150px auto;
+    width: 350px;
+    border-radius: 10px;
+    opacity: 1;
+    padding: 25px;
+    content: "";
+    -webkit-box-shadow: 0 10px 20px #0c0d2259;
+    -moz-box-shadow: 0 10px 20px #0c0d2259;
+    box-shadow: 0 10px 20px #0c0d2259;
+}
+
+.sarted-message .message .top {
+    color: #21405f;
+    text-align: right;
+    margin-top: -20px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sarted-message .message center {
+    margin: 40px 0px 20px;
 }
 
 
@@ -269,7 +368,7 @@ body {
 }
 
 .btn {
-    text-decoration: none;
+    text-decoration: none !important;
     color: #21405f;
     padding: 5px 20px 7px;
     border-radius: 50px;
@@ -278,6 +377,10 @@ body {
     font-weight: 600;
     font-size: 18px;
     box-shadow: 1px 3px 10px #00000023;
+}
+
+.routerLink {
+    text-decoration: none !important;
 }
 
 .btn:hover {
@@ -329,8 +432,6 @@ body {
     right: 0;
     bottom: 0;
     width: 72%;
-    /* height: 600px; */
-    /* z-index: -1; */
 }
 
 .contenu-accueil p {
@@ -362,6 +463,7 @@ body {
 
 .col_terminaux .left {
     text-align: center;
+    position: relative;
 }
 
 .col_terminaux .left .title {
@@ -370,6 +472,51 @@ body {
 
 .contenu-terminaux .left #te {
     margin-bottom: 15px !important;
+}
+
+.item-terminal {
+    display: none;
+    margin-left: -30px;
+    margin-right: 30px;
+    transition-property: margin-left, margin-right;
+    transition-duration: 1s;
+    transition: 1s;
+}
+
+.show-item {
+    display: block !important;
+    transition: 1s;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.item-terminal .btn_slide {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: absolute;
+    margin-top: 300px;
+}
+
+.item-terminal .btn_slide img {
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 1px 3px 10px #00000023;
+}
+
+.item-terminal .btn_slide img:hover {
+    box-shadow: 1px 5px 10px #00000041;
+    cursor: pointer;
+}
+
+.item-terminal .btn_slide #arrow_left {
+    text-align: left;
+    margin-left: -40px;
+}
+
+.item-terminal .btn_slide #arrow_right {
+    text-align: right;
+    margin-right: -40px;
 }
 
 .terminal {
@@ -400,8 +547,6 @@ body {
     grid-template-columns: 60% auto;
 }
 
-.terminal .entete .entete-left {}
-
 .terminal .entete .entete-left .pt-icones img {
     height: 15px;
     margin: 0px 3px
@@ -422,7 +567,7 @@ body {
 }
 
 .col_terminaux .right p.title {
-    font-size: 38px;
+    font-size: 33px;
     font-weight: 500;
     text-align: center;
 }
@@ -459,12 +604,12 @@ body {
 
 
 /* ===================================
-				 End terminaux index
+		 End terminaux index
 =================================== */
 
 
 /* ===================================
-				 End terminaux index
+		   service index
 =================================== */
 
 .service .left {
@@ -472,8 +617,8 @@ body {
 }
 
 .service .left .title {
-    font-size: 22px;
-    font-weight: 500 !important;
+    font-size: 19px;
+    font-weight: 700 !important;
     color: rgba(255, 255, 255, 0.925) !important;
     line-height: 22px;
     border-bottom: 1px solid #52aeebb4;
@@ -481,7 +626,8 @@ body {
     cursor: pointer;
 }
 
-.service .left .title:focus {
+.service .left .title.active {
+    background: none !important;
     color: #66a9d6 !important;
 }
 
@@ -509,5 +655,609 @@ body {
 
 
 /* ===================================
-				 End terminaux index
+	     End service index
+=================================== */
+
+
+/* ===================================
+		    tarifs index
+=================================== */
+
+.carte-dc {
+    background-color: #fff;
+    color: #3a5383 !important;
+    min-height: 100px;
+    padding: 15px;
+    text-align: left !important;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 49% 1% 50%;
+}
+
+.carte-dc .carte-separation {
+    border-left: 1px solid #697bac69;
+    margin: 10px 0px;
+}
+
+.carte-dc .carte-title {
+    color: #3a5383;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.carte-dc .entete {
+    display: grid;
+    grid-template-columns: auto 54%;
+    margin: 20px 0px 10px;
+}
+
+.carte-dc .entete .entete-left {
+    font-weight: bold;
+    color: #52aeeb;
+}
+
+.carte-dc .entete .entete-right {
+    text-align: right;
+}
+
+.carte-dc .btn {
+    padding: 5px 13px 7px;
+    font-size: 15px;
+    border: none !important;
+    border-radius: 9px !important;
+    box-shadow: none;
+}
+
+.carte-dc .body-price {
+    padding: 15px 0px 5px 0px;
+}
+
+.carte-dc .body-price img {
+    height: 120px;
+}
+
+.carte-contenue-separation {
+    border-top: 1px solid #697bac38;
+    margin-right: 20px;
+}
+
+.small-text {
+    padding: 10px 0px;
+}
+
+.small-text small {
+    font-size: 15.5px !important;
+    display: block;
+    line-height: 20px;
+}
+
+.small-text small span {
+    color: #52aeeb;
+}
+
+.bancontact {
+    width: 60%;
+    margin: auto;
+    padding: 10px 15px 0px 0px;
+}
+
+.bancontact img {
+    width: 100%;
+}
+
+.footer-carte {
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: 5% auto;
+    margin-left: -5px;
+}
+
+.footer-carte span .small-text {
+    padding: 0;
+}
+
+.footer-carte span .small-text #small {
+    font-size: 14px !important;
+    font-weight: bold;
+    line-height: 16px !important;
+}
+
+.carte-dc .rr {
+    padding-left: 10px;
+    width: 100%;
+}
+
+#separation_2 {
+    border-top: 1px solid #697bac38;
+    margin-right: 0px !important;
+    width: 100%;
+}
+
+#carte-dc-right {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+#carte-dc-right .entete-2 {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    padding-top: 30px;
+}
+
+#carte-dc-right .entete-2 .entete-left {
+    font-weight: bold;
+    color: #52aeeb;
+}
+
+#carte-dc-right .entete-2 .entete-center {
+    width: 100%;
+}
+
+#carte-dc-right .entete-2 .entete-center img {
+    height: 120px;
+}
+
+#carte-dc-right .entete-2 .entete-right {
+    text-align: right;
+    line-height: 100px;
+}
+
+#carte-dc-right .body-big {
+    display: grid;
+    grid-template-columns: 65% auto;
+    line-height: 16px !important;
+    padding: 10px 0px;
+}
+
+#carte-dc-right .body-big span.bbleft-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#carte-dc-right .body-big span {
+    font-size: 16.5px;
+}
+
+#carte-dc-right .body-big .bbright {
+    padding-left: 20px;
+}
+
+#carte-dc-right .body-small {
+    padding: 10px 0px;
+    font-size: 13.5px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+#carte-dc-right .footer-brends {
+    padding: 15px 0px;
+}
+
+#carte-dc-right .footer {
+    padding: 10px 0px;
+    font-size: 13.5px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+.accessoires {
+    width: 93%;
+}
+
+.accessoires .accessoire {
+    border: 1px solid grey;
+    margin: 7px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #21405f;
+    padding: 15px 15px 40px 15px;
+}
+
+.accessoires .accessoire .entete {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.accessoires .accessoire .body {
+    padding: 30px 0px;
+    height: 110px;
+    width: 100%;
+}
+
+.accessoires .accessoire .body img {
+    height: 100%;
+    width: 85%;
+}
+
+.accessoires .accessoire .price {
+    display: grid;
+    grid-template-columns: 40% auto;
+    width: 100%;
+}
+
+.accessoires .accessoire .price #pr {
+    text-align: right;
+    line-height: 50px;
+}
+
+.accessoires .accessoire .price #pr .btn {
+    padding: 5px 7px !important;
+    border: none !important;
+    border-radius: 12px !important;
+    margin-right: 0;
+    object-fit: cover;
+}
+
+.separteur-contenu-accessoire {
+    border-bottom: 1px solid #1e2a4c;
+    margin: 5px 0px 10px;
+}
+
+.accessoires .accessoire .footer p.fa-title {
+    font-weight: bold;
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+}
+
+.accessoires .accessoire .footer span {
+    font-size: 15.5px !important;
+}
+
+
+/* --------------- slide -------------------- */
+
+.mySlides {
+    display: none
+}
+
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow-container .mySlides .under-block {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev img,
+.next img {
+    width: 30px;
+}
+
+.prev {
+    margin-left: -40px;
+}
+
+.next {
+    right: 0;
+    margin-right: -40px;
+    border-radius: 3px 0 0 3px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #3c83b341;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #52aeeb;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.fade-2 {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade-2 {
+    from {
+        opacity: .6
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade-2 {
+    from {
+        opacity: .6
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.fade-3 {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade-3 {
+    from {
+        opacity: .8
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade-3 {
+    from {
+        opacity: .8
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.fade-4 {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@-webkit-keyframes fade-4 {
+    from {
+        opacity: .10
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade-4 {
+    from {
+        opacity: .10
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .prev img,
+    .next img {
+        width: 25px;
+    }
+}
+
+
+/* ------------- end slide --------------- */
+
+
+/* ===================================
+		    End tarifs index
+=================================== */
+
+
+/* ===================================
+		      a propos index
+=================================== */
+
+.apropos {
+    color: #fefefe;
+    width: 82%;
+    line-height: 20px;
+    font-size: 21px;
+}
+
+.apropos span {
+    font-weight: bold;
+}
+
+.apropos .lire-plus {
+    height: 20px;
+    overflow: hidden;
+    padding: 5px 0px;
+    margin-top: -20px;
+}
+
+.apropos .lire-plus.solapsShow {
+    height: auto;
+}
+
+.apropos .lire-plus span {
+    color: #52aeeb;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.apropos .lire-plus span img {
+    width: 16px;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.apropos .lire-plus span img#white {
+    display: none;
+}
+
+
+/* ===================================
+		    End a propos index
+=================================== */
+
+
+/* ===================================
+		    expertise index
+=================================== */
+
+.expertise {
+    color: #fff;
+    display: grid;
+    width: 75%;
+    grid-template-columns: 150px auto;
+}
+
+.expertise .expertise-left,
+.expertise .expertise-right {
+    /* border: 1px solid grey; */
+    margin-bottom: 10px;
+}
+
+.expertise .expertise-left img {
+    width: 95%;
+}
+
+.expertise .expertise-right {
+    margin-left: 15px;
+}
+
+.expertise .expertise-right p {
+    margin: 0;
+    line-height: 23px;
+}
+
+.expertise .expertise-right p span {
+    line-height: 40px;
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+
+/* ===================================
+		    End expertise index
+=================================== */
+
+
+/* ===================================
+		    contact index
+=================================== */
+
+.contact {
+    background: none;
+    border-radius: 30px;
+    width: 500px;
+    overflow: hidden;
+    margin: auto 200px;
+    display: grid;
+    grid-template-columns: 50% auto;
+    border: none;
+}
+
+.contact .contact-left {
+    background-color: #385f84;
+    color: #fff;
+    padding: 20px;
+}
+
+.contact .contact-left .form-input {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    border-bottom: 1px dotted #868891;
+    margin: 0px 0px 15px;
+    font-size: 16px;
+}
+
+.contact .contact-left .form-input input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.form-textarea {
+    font-size: 16px;
+}
+
+.form-textarea textarea {
+    padding: 10px;
+    border-radius: 10px;
+    width: 93%;
+    border: none;
+    margin-top: 10px;
+    min-height: 100px;
+}
+
+.contact .contact-left .form-radio {
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+.contact .contact-left .btn {
+    font-size: 16px;
+    font-family: Agency FB !important;
+    padding: 4px 35px !important;
+}
+
+.contact .contact-right {
+    background-color: #fff;
+    color: #192547;
+    padding: 20px;
+}
+
+
+/* ===================================
+		End contact index
+=================================== */
+
+
+/* ===================================
+		     News index
+=================================== */
+
+.news {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 150px;
+}
+
+.news p {
+    font-size: 30px;
+}
+
+
+/* ===================================
+		    End News index
 =================================== */

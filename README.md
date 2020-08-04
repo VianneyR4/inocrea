@@ -1,6 +1,6 @@
 # vuejs
 
-> A Vue.js project
+> Inocrea project
 
 ## Build Setup
 

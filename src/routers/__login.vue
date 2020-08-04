@@ -1,21 +1,23 @@
 <template>
     <div class="body" id="blue">
+
         <section class="side-bar" id="asas">
             <img class="logo" src="../assets/img/logo.png">
             <div class="menu">
                 <ul>
                     <li class="">
-                        <a href="#" class="dropdown">
+                        <a href="#" class="link">
                             <router-link to="/">
-                            <img src="../assets/img/icones/home.png"> Accueil
+                            <img src="../assets/img/icones/noire-1.png"> 
+                            <span>Accueil</span> 
                             </router-link>
                         </a>
                     </li>
-                    <li class="active">
+                    <li class="">
                         <a href="#" class="dropdown">
-                            <img src="../assets/img/icones/box-white.png">
-                            <span onclick="myFunction()" class="dropbtn">Solutions de paiement <img id="dd_icon" src="../assets/img/icones/icons8_sort_down_52px.png"></span>
-                            <div id="myDropdown" class="dropdown-content">
+                            <img src="../assets/img/icones/noire-2.png">
+                            <span onclick="myFunction()" class="dropbtn">Solutions de paiement<img id="dd_icon" src="../assets/img/icones/icons8_sort_down_52px.png"></span>
+                            <div id="myDropdown" class="dropdown-content show">
                                 <a href="#">
                                     <router-link to="/terminaux">
                                         <div class="span">Terminaux de paiement</div>
@@ -23,7 +25,7 @@
                                 </a>
                                 <a href="#">
                                     <router-link to="/tarifs">
-                                    <div class="span active">Nos tarif</div>
+                                    <div class="span">Nos tarif</div>
                                     </router-link>
                                 </a>
                             </div>
@@ -31,7 +33,7 @@
                     </li>
                     <li class="dd">
                         <a href="#" class="dropdown">
-                            <img src="../assets/img/icones/icons8_credit_card_100px.png">
+                            <img src="../assets/img/icones/noire-3.png">
                             <span onclick="myFunction2()" class="dropbtn">Services & Accessoires<img id="dd_icon" src="../assets/img/icones/icons8_sort_down_52px.png"></span>
                             <div id="myDropdown2" class="dropdown-content2 show">
                                 <a href="#">
@@ -40,7 +42,7 @@
                                     </router-link>
                                 </a>
                                 <a href="#">
-                                    <router-link to="/terminaux">
+                                    <router-link to="/accessoires">
                                     <div class="span">Nos accessoires</div>
                                     </router-link>
                                 </a>
@@ -49,23 +51,31 @@
                     </li>
                     <div class="separateur">.</div>
                     <li class="dd">
-                        <a href="about.html" class="dropdown">
-                            <img src="../assets/img/icones/icons8_group_15px_2.png"> A Propos de nous
+                        <a href="#" class="link">
+                            <router-link to="/about">
+                                <img id="icone_users" src="../assets/img/icones/icons8_group_15px_2.png"> <span>A Propos de nous</span>
+                            </router-link>
                         </a>
                     </li>
                     <li class="">
-                        <a href="expertise.html" class="dropdown">
-                            <img src="../assets/img/icones/icons8_search_64px.png"> Expertise
+                        <a href="#" class="link">
+                            <router-link to="/expertise">
+                            <img src="../assets/img/icones/noire-5.png"> <span>Expertise</span>
+                            </router-link>
                         </a>
                     </li>
                     <li class="">
-                        <a href="contact.html" class="dropdown">
-                            <img src="../assets/img/icones/icons8_chat_room_60px.png"> Contact
+                        <a href="#" class="link">
+                            <router-link to="/contact">
+                            <img src="../assets/img/icones/noire-6.png"> <span>Contact</span>
+                            </router-link>
                         </a>
                     </li>
                     <li class="">
-                        <a href="news.html" class="dropdown">
-                            <img src="../assets/img/icones/icons8_news_64px.png"> News
+                        <a href="#" class="link">
+                            <router-link to="/news">
+                            <img src="../assets/img/icones/noire-7.png"> <span>News</span>
+                            </router-link>
                         </a>
                     </li>
                 </ul>
@@ -77,34 +87,26 @@
                 </div>
             </div>
         </section>
+
         <section class="mobile" onclick="showMenu()">
             <button>MENU</button>
         </section>
-				
-    <section class="main">
-        <div class="container">
-            <div class="top">
-                <a class="btn primary-2" href="demande-offre.html">Demander une offre</a>
-                <a class="btn white" href="login.html">Se connecter</a>
-            </div>
-            <div class="contenu-terminaux">
-                <h4 class="title color-white">Nos tarifs de carte de débit et crédit</h4>
-                <div class="col_terminaux">
-                    <div class="left">
-                        <h4 class="title color-blue" id="te">Carte de debit</h4>
-                        <div class="terminal">
 
-
+        <section class="main">
+                <div class="container">
+                        <div class="top">
+                        <router-link class="routerLink" to="/demande-offre"><a class="btn primary-2" href="#">Demander une offre</a></router-link>
+                        <router-link class="routerLink" to="/se-connecter"><a class="btn white" href="#">Se connecter</a></router-link>
                         </div>
-                    </div>
-                    <div class="right">
-                        <p class="title color-white">Un coût de transaction pour les paiements par carte Bancontact simple et transparent ! Choisissez le tarif qui convient le mieux à votre activité!</p>
-                    </div>
+                        <div class="contenu-terminaux">
+                            <h4 class="title color-white">Se connecter</h4>
+                            <br/>
+                            
+                        </div>
+                        <br/><br/><br/>
                 </div>
-            </div>
-            <br/><br/><br/>
-        </div>
-    </section>
+        </section>
+
     </div>
 
 </template>
